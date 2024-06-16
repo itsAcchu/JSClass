@@ -1,0 +1,22 @@
+.button{
+    width: 250px;
+    height: 100px;
+    padding: 50px;
+    position: relative;
+    top: 150px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+#gray{
+    background-color: gray;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+#white{
+    background-color: aliceblue;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2> Amaze Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoShop" src="pexels-danila-volkov-20195381-17307126.jpg" alt=""></li>
+            <li><img width="200px" id="japan" src="pexels-jeremy-bishop-1260133-20147091.jpg"></li>
+            <li><img width="200px" id="river" src="pexels-okiine-2381761-18374878.jpg"></li>
+            <li><img width="200px" id="owl" src="pexels-thanh-luu-29104820-19057526.jpg"></li>
+            <li><a style="color: aliceblue;" id="google" href="https://google.com">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('clicked')   // its give less features
+    // }
+
+    //attachEvent()
+    // jQuery - onEventListener()
+  
+    // type, timestamp, defaultPrevented, target, toElement, parentNode
+    // srcElement, currentTarget, clientX, clientY, screenX, screenY
+    // altKey, ctrKey, shiftKey, keyCode
+
+    // Bubbling works inside to outsike like bubble
+    // Capturing works like top to bottom 
+
+    // document.getElementById('images').addEventListener('click',function(x){
+    //     console.log('clicked ul');
+    // })  // default was false -> eventBubbling, true -> eventCapturing
+    // document.getElementById('japan').addEventListener('click',function(x){
+    //     console.log('clicked li');
+    //     x.stopPropagation() // its stops the bubble move to upper event
+    // }) 
+
+    // document.getElementById('google').addEventListener('click',(x)=>{
+    //     x.preventDefault()
+    //     x.stopPropagation()
+    //     console.log('clicked google'); 
+    // })
+
+    document.querySelector('#images').addEventListener('click',(x)=>{
+        console.log(x.target.tagName);
+        if(x.target.tagName === 'IMG'){
+            let removeit = x.target.parentNode
+            removeit.remove()
+        }     
+    },false)
+
+</script>
+</html>
+

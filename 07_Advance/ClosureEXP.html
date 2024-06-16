@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="org">start 01</button>
+    <button id="gre">start 02</button>
+
+    <script>
+        function clickHandler(color){
+          return function () {  // using lexical & closuer
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        document.querySelector('#org').onclick = clickHandler('orange')
+        document.querySelector('#gre').onclick = clickHandler('green')
+    </script>
+</body>
+</html>
